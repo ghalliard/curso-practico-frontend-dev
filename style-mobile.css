@@ -1,0 +1,347 @@
+:root{
+    --very-light-pink: #C7C7C7;
+    --text-input-field: #F7F7F7;
+    /* --hospital-green: #d3a8d3; */
+    --hospital-green: #ACD9B2;
+    --black: #000;
+    --white: #FFF;
+    --sm: 1.4rem;
+    --md: 1.6rem;
+    --lg: 1.8rem;
+    --card-size: 140px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+
+header{
+    display: none;
+}
+main{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    min-width: 320px;
+    height: 100vh;
+}
+.login-card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 300px;
+}
+.login-card .login-card--image{
+    text-align: center;
+    margin-bottom: 48px;
+}
+.login-card .login-card--image picture img{
+    width: 150px;
+}
+.login-card .login-card--text-box{
+    text-align: center;
+    margin-bottom: 32px;
+}
+.login-card .login-card--text-box h1{
+    font-size: var(--lg);
+}
+.login-card .login-card--text-box h1 > span{
+    color: var(--hospital-green);
+}
+.login-card .login-card--text-box p{
+    color: var(--very-light-pink);
+    font-size: var(--sm);
+    font-weight: 300;
+}
+.login-card .login-card--form-container label{
+    display: block;
+    font-size: var(--sm);
+    font-weight: bold;
+}
+.login-card .login-card--form-container label span{
+    display: block;
+    margin-bottom: 8px;
+}
+.input{
+    width: 100%;
+    height: 32px;
+    background-color: var(--text-input-field);
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 24px;
+
+    font-size: var(--md);
+}
+.primary-button{
+    width: 100%;
+    height: 40px;
+    margin-top: 15px;
+    background-color: var(--hospital-green);
+    border-radius: 8px;
+    border: none;
+
+    color: var(--white);
+    font-size: var(--md);
+    font-weight: bold;
+    cursor: pointer;
+}
+.image-email{
+    padding: 16px 0;
+}
+.image-email picture{
+    display: grid;
+    place-items: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    background-color: var(--text-input-field);
+}
+.text-email{
+    margin-top: 16px;
+    text-align: center;
+    font-size: var(--sm);
+    color: var(--very-light-pink);
+}
+.text-email a{
+    text-decoration: none;
+    color: var(--hospital-green);
+}
+.forgotPass{
+    margin-top: 20px;
+    text-align: center;
+}
+.forgotPass a{
+    text-decoration: none;
+    color: var(--hospital-green);
+    font-size: var(--sm);
+}
+.forgotPass a:hover{
+    text-decoration: underline;
+}
+.second-button{
+    position: absolute;
+    bottom: 0;
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 24px;
+    background-color: var(--white);
+    border-radius: 8px;
+    border: 1px solid var(--hospital-green);
+
+    color: var(--hospital-green);
+    font-size: var(--md);
+    font-weight: bold;
+    cursor: pointer;
+}
+/* create account style */
+.body-create-account{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.header-create-account{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 320px;
+    height: 52px;
+
+    border-bottom: 1px solid var(--very-light-pink);
+}
+.header-create-account .image-nav div img{
+    width: 150px;
+}
+.header-create-account .options input{
+    margin-left: 8px;
+    width: 20px;
+}
+.header-create-account .image-nav nav{
+    display: none;
+}
+.header-create-account .sign-icon button{
+    display: none;
+}
+.header-create-account .sign-icon{
+    margin-right: 20px;
+}
+.main-create-account{
+    height: 100%;
+}
+.main-create-account .login-card{
+    padding-top: 32px;
+    justify-content: start;
+}
+.main-create-account .login-card .login-card--text-box{
+    text-align: start;
+}
+.main-create-account .login-card--form-container form .primary-button{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 24px;
+}
+/* edit account style */
+.main-create-account .login-card .login-card--form-container form label .edit-account-input{
+    background-color: var(--white);
+}
+/* beginning's style */
+.main-container{
+    min-width: 320px;
+}
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--card-size), 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+.product-card > img{
+    width: 100%;
+    border-radius: 20px;
+}
+.product-card .product-info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    font-size: var(--sm);
+}
+.product-info figure img{
+    width: 35px;
+}
+.product-info div p:nth-child(1){
+    font-weight: bold;
+}
+.product-info div p:nth-child(2){
+    color: var(--very-light-pink);
+}
+@media (min-width: 460px){
+    .cards-container{
+        --card-size: 200px
+    }
+}
+@media (min-width: 500px) {
+    .cards-container{
+        /* --card-size: 200px; */
+        gap: 20px;
+    }
+    .main-create-account .login-card--form-container form   .primary-button{
+        margin-bottom: 0px;
+    }
+    .main-create-account .login-card--form-container form .primary-button, .main-create-account .login-card--form-container form .second-button{
+        position: static;
+    }
+    .main-create-account .login-card{
+        width: 350px;
+        padding-top: 0;
+        justify-content: center;
+    }
+    .second-button__edit-account{
+        margin-top: 15px;
+        margin-bottom: 0;
+    }
+}
+@media (min-width: 725px) {
+    .flex-body{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+    main{
+        height: 100%;
+    }
+    .login-card .login-card--image{
+        display: none;
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 52px;
+
+        border-bottom: 1px solid var(--very-light-pink);
+    }
+    header .image-nav{
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+    }
+    header .image-nav div img{
+        width: 150px;
+    }
+    header .image-nav nav ul{
+        display: flex;
+        padding-left: 24px;
+        list-style: none;
+        font-size: var(--md);
+        font-weight: bold;
+    }
+    header .image-nav nav ul li{
+        padding: 4px 8px;
+        border-radius: 12px;
+    } 
+    header .image-nav nav ul li a{
+        text-decoration: none;
+        color: var(--black);
+    }  
+    header .image-nav nav ul li:nth-child(1) a{
+        color: var(--hospital-green);
+    }
+    header .image-nav nav ul li:nth-child(1){
+        border: 2px solid var(--hospital-green);
+    }
+    header .sign-icon{
+        display: inherit;
+        margin-right: 12px;  
+    }
+    header .sign-icon button{
+        margin: 0 12px;
+        border: none;
+        background: none;
+
+        color: var(--hospital-green);
+        font-weight: bold;
+        font-size: var(--md);
+        cursor: pointer;
+    }
+    .second-button{
+        position: static;
+        margin-top: 48px;
+        margin-bottom: 0;
+    }
+    /* header create account */
+    .header-create-account .options{
+        display: none;
+    }
+    .header-create-account .image-nav nav{
+        display: block;
+    }
+    .header-create-account .sign-icon button{
+        display: block;
+    }
+    /* beginning's style */
+    .cards-container{
+        --card-size: 230px;
+        gap: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    .product-card .product-info{
+        font-size: var(--md);
+    }
+}
+@media (min-width: 1330px){
+    .cards-container{
+        --card-size: 280px;
+    }
+}
+

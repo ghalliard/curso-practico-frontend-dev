@@ -1,0 +1,60 @@
+:root{
+    --very-light-pink: #C7C7C7;
+    --text-input-field: #F7F7F7;
+    --hospital-green: #ACD9B2;
+    --black: #000;
+    --white: #FFF;
+    --sm: 1.4rem;
+    --md: 1.6rem;
+    --lg: 1.8rem;
+    --card-size: 140px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+
+.principal-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-width: 320px;
+    height: 100vh;
+    padding: 48px 40px 64px 40px;
+
+    font-size: var(--md);
+    font-weight: bold;
+}
+.principal-menu ul{
+    list-style: none;
+}
+.principal-menu ul li a{
+    text-decoration: none;
+    color: var(--black);
+}
+.principal-menu ul:not(:last-child) li{
+    padding: 16px 0;
+}
+.principal-menu--others{
+    padding-top: 20px;
+    border-top: 1px solid var(--very-light-pink);
+}
+.principal-menu--categories p{
+    margin-bottom: 20px;
+}
+.principal-menu--account li:nth-child(1) a{
+    display: inline-block;
+    color: var(--very-light-pink);
+    padding-bottom: 8px;
+}
+.principal-menu--account li:nth-child(2) a{
+    color: var(--hospital-green);
+}
